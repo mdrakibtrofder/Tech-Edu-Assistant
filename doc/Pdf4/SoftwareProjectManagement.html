@@ -2,97 +2,139 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/Style.css">
+  <link rel="stylesheet" href="../../css/LandingPage.css">
+  <link rel="icon" href="../../t.png" type="image/x-icon">
+
   <title>Software Project Management</title>
-  <link rel="icon" href="t.png" type="image/x-icon" />
-  <link rel="stylesheet" type="text/css" href="../../css/SubjectStyle.css" />
 </head>
 
-<body bgcolor="#00FA9A">
-  <h3>
-    <ul>
-      <li class="web">
-        <a class="white" href="../SubType4/SoftwareProjectManagement.html">Topics</a>
-      </li>
-      <li class="web">
-        <a class="white" href="../VideoLink4/SoftwareProjectManagement.html">Video Tutorials</a>
-      </li>
-      <li class="web">
-        <a class="white" href="../Pdf4/SoftwareProjectManagement.html">Slides</a>
-      </li>
-      <li class="web">
-        <a class="white" href="../Link4/SoftwareProjectManagement.html">Links</a>
-      </li>
-    </ul>
-  </h3>
-  <br />
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="wrapper">
+        <a href="../../index.html" class="site-title"><span class="site-title-icon">🎓</span> <span
+            class="site-title-text">Tech Edu<br>Assistant</span></a>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../html/Semesters.html">Semesters</a></li>
+          <li><a href="../html/Subjects.html">Subjects</a></li>
+          <li><a href="../html/Books.html">Books</a></li>
+          <li><a href="../html/IIT_Syllabus.pdf">Syllabus</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <br />
-  <h1 class="headlines">Software Project Management</h1>
-  <br />
+  <main>
+    <!-- Books -->
+    <section class="card-menu-section" style="background-color: #fff;">
+      <div class="container">
+        <h2>Books</h2>
+        <div class="card-grid">
+          <a href="../Pdf4/SoftwareProjectManagement/PMBOK-Guide.pdf" class="card-item">
+            <div class="card-icon">📘</div>
+            <h3>PMBOK Guide</h3>
+            <p>Project Management Book.</p>
+          </a>
+          <a href="../Pdf4/SoftwareProjectManagement/Head-First-PMP.pdf" class="card-item">
+            <div class="card-icon">🧠</div>
+            <h3>Head First PMP</h3>
+            <p>PMP Exam Guide.</p>
+          </a>
+          <a href="../Pdf4/SoftwareProjectManagement/Scrum-XP-from-the-trenches.pdf" class="card-item">
+            <div class="card-icon">⚔️</div>
+            <h3>Scrum XP</h3>
+            <p>From the Trenches.</p>
+          </a>
+          <a href="../Pdf4/SoftwareProjectManagement/Lean-from-the-trenches.pdf" class="card-item">
+            <div class="card-icon">🏗️</div>
+            <h3>Lean</h3>
+            <p>From the Trenches.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <h2 class="headlines">Books</h2>
-  <ul class="Semester">
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareProjectManagement/PMBOK-Guide.pdf">PMBOK Guide</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareProjectManagement/Head-First-PMP.pdf">Head First PMP</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareProjectManagement/Scrum-XP-from-the-trenches.pdf">Scrum XP from the
-        trenches</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareProjectManagement/Lean-from-the-trenches.pdf">Lean from the trenches</a>
-    </li>
-  </ul>
+    <!-- Slides (Current) -->
+    <section class="card-menu-section">
+      <div class="container">
+        <h2>Current Year (2023) Slides</h2>
+        <div class="card-grid">
+          <a href="../Pdf4/SoftwareProjectManagement/Syllabus.pdf" class="card-item">
+            <div class="card-icon">📝</div>
+            <h3>Syllabus</h3>
+            <p>Course Syllabus.</p>
+          </a>
+          <a href="../Pdf4/SoftwareProjectManagement/ScrumPrimer.pdf" class="card-item">
+            <div class="card-icon">🔄</div>
+            <h3>Scrum Primer</h3>
+            <p>Agile Basics.</p>
+          </a>
+          <a href="../Pdf4/SoftwareProjectManagement/AgileProjectManagement.pdf" class="card-item">
+            <div class="card-icon">🏃</div>
+            <h3>Agile PM</h3>
+            <p>Agile Management.</p>
+          </a>
+          <a href="../Pdf4/SoftwareProjectManagement/SoftwareProjectManagement.pdf" class="card-item">
+            <div class="card-icon">🏗️</div>
+            <h3>SPM</h3>
+            <p>General Management.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <br />
-  <h2 class="headlines">Current Year (2023) Slides</h2>
-  <br />
+    <!-- Slides (Previous) -->
+    <section class="card-menu-section" style="background-color: #fff;">
+      <div class="container">
+        <h2>Previous Year Slides</h2>
+        <div class="card-grid">
+          <a href="../Pdf4/SoftwareMaintenance/Comprehension.pdf" class="card-item">
+            <div class="card-icon">🧠</div>
+            <h3>Comprehension</h3>
+            <p>Program Comprehension.</p>
+          </a>
+          <a href="../Pdf4/SoftwareMaintenance/DevOps-in-Software-Maintenance.pdf" class="card-item">
+            <div class="card-icon">🚀</div>
+            <h3>DevOps</h3>
+            <p>Software Maintenance.</p>
+          </a>
+          <a href="../Pdf4/SoftwareMaintenance/Impact-Analysis.pdf" class="card-item">
+            <div class="card-icon">💥</div>
+            <h3>Impact Analysis</h3>
+            <p>Maintenance Impact.</p>
+          </a>
+          <a href="../Pdf4/SoftwareMaintenance/Reengineering.pdf" class="card-item">
+            <div class="card-icon">♻️</div>
+            <h3>Reengineering</h3>
+            <p>System Update.</p>
+          </a>
+          <a href="../Pdf4/SoftwareMaintenance/Reverse-Engineering.pdf" class="card-item">
+            <div class="card-icon">⏪</div>
+            <h3>Reverse Eng</h3>
+            <p>Legacy Systems.</p>
+          </a>
+          <a href="../Pdf4/SoftwareMaintenance/Software-Maintenance.pdf" class="card-item">
+            <div class="card-icon">🛠️</div>
+            <h3>Maintenance</h3>
+            <p>General Principles.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <ul class="Semester">
-  <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareProjectManagement/Syllabus.pdf">Syllabus</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareProjectManagement/ScrumPrimer.pdf">Scrum Primer</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareProjectManagement/AgileProjectManagement.pdf">Agile Project Management</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareProjectManagement/SoftwareProjectManagement.pdf">Software Project
-        Management</a>
-    </li>
-  </ul>
+  </main>
 
-  <br />
-  <h2 class="headlines">Previous Year Slides</h2>
-  <br />
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 Tech Edu Assistant. All rights reserved.</p>
+    </div>
+  </footer>
 
-  <ul class="Semester">
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareMaintenance/Comprehension.pdf">Comprehension</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareMaintenance/DevOps-in-Software-Maintenance.pdf">DevOps in Software
-        Maintenance</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareMaintenance/Impact-Analysis.pdf">Impact Analysis</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareMaintenance/Reengineering.pdf">Reengineering</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareMaintenance/Reverse-Engineering.pdf">Reverse Engineering</a>
-    </li>
-    <li class="Semester">
-      <a class="white" href="../Pdf4/SoftwareMaintenance/Software-Maintenance.pdf">Software Maintenance</a>
-    </li>
-  </ul>
+  <script src="../../js/main.js"></script>
 </body>
 
 </html>
