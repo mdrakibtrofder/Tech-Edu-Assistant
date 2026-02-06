@@ -130,10 +130,13 @@ body {
 }
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card-item {
@@ -148,6 +151,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 0 1 300px; /* Base width 300px, can shrink but not grow aggressively */
+  min-width: 250px;
 }
 
 .card-item:hover {
@@ -255,9 +260,8 @@ body {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
-  }
+  /* card-grid is now flexbox, so we might not need grid overrides if implemented correctly */
+  /* But strictly speaking, we might want to ensure they don't get too wide */
 }
 
 @media (max-width: 768px) {
@@ -282,9 +286,10 @@ body {
   .hero-section p {
     font-size: 1em;
   }
-
-  .card-grid {
-    grid-template-columns: 1fr; /* 1 item per row on small screens */
+  
+  /* card-grid handles itself via flex-wrap */
+  .card-item {
+    flex: 1 1 100%; /* Take full width on mobile */
   }
 
   .feature-grid {
