@@ -1,95 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Web Technology</title>
-    <link rel="icon" href="t.png" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="../../css/SubjectStyle.css" />
-  </head>
 
-  <body bgcolor="#00FA9A">
-    <h3>
-      <ul>
-        <li class="web">
-          <a class="white" href="../SemestersGroup/5thSemester.html"
-            >5th Semester</a
-          >
-        </li>
-        <li class="web">
-          <a class="white" href="../VideoLink3/WebTechnology.html"
-            >Video Tutorials</a
-          >
-        </li>
-        <li class="web">
-          <a class="white" href="../Pdf3/WebTechnology.html">Slides</a>
-        </li>
-        <li class="web">
-          <a class="white" href="../Link3/WebTechnology.html">Links</a>
-        </li>
-      </ul>
-    </h3>
-    <br /><br />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/Style.css">
+  <link rel="stylesheet" href="../../css/LandingPage.css">
+  <link rel="icon" href="../../t.png" type="image/x-icon">
 
-    <h1 class="headlines">Web Technology</h1>
-    <br />
-    <div class="navbar">
-      <h2 style="text-align: center">Web Technology Books</h2>
-      <ul class="Semester">
-        <li class="Semester">
-          <a
-            class="white"
-            href="BusinessWebTechSlides/Web-Design-in-a-Nutshell.pdf"
-            >Web Design in a Nutshell</a
-          >
-        </li>
-        <li class="Semester">
-          <a
-            class="white"
-            href="BusinessWebTechSlides/Teach-Yourself-HTML-CSS-and-JavaScript.pdf"
-            >Teach Yourself HTML CSS and JavaScript</a
-          >
-        </li>
-      </ul>
+  <title>Web Technology</title>
+</head>
 
-      <h2 style="text-align: center">Web Technology Slides</h2>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="wrapper">
+        <a href="../../index.html" class="site-title"><span class="site-title-icon">🎓</span> <span
+            class="site-title-text">Tech Edu<br>Assistant</span></a>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../html/Semesters.html">Semesters</a></li>
+          <li><a href="../html/Subjects.html">Subjects</a></li>
+          <li><a href="../html/Books.html">Books</a></li>
+          <li><a href="../html/IIT_Syllabus.pdf">Syllabus</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-      <ul class="Semester">
-        <li class="Semester">
-          <a class="white" href="BusinessWebTechSlides/Angular13.pdf"
-            >Angular 13</a
-          >
-        </li>
-        <li class="Semester">
-          <a class="white" href="BusinessWebTechSlides/DotNetCore.pdf"
-            >.NET CORE</a
-          >
-        </li>
-      </ul>
+  <main>
+    <!-- Books -->
+    <section class="card-menu-section" style="background-color: #fff;">
+      <div class="container">
+        <h2>Web Technology Books</h2>
+        <div class="card-grid">
+          <a href="BusinessWebTechSlides/Web-Design-in-a-Nutshell.pdf" class="card-item">
+            <div class="card-icon">📕</div>
+            <h3>Web Design Nutshell</h3>
+            <p>Web Design in a Nutshell.</p>
+          </a>
+          <a href="BusinessWebTechSlides/Teach-Yourself-HTML-CSS-and-JavaScript.pdf" class="card-item">
+            <div class="card-icon">📘</div>
+            <h3>HTML CSS JS</h3>
+            <p>Teach Yourself HTML CSS JS.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-      <h2 style="text-align: center">Web Technology Tutorial Slides</h2>
+    <!-- Slides -->
+    <section class="card-menu-section">
+      <div class="container">
+        <h2>Web Technology Slides</h2>
+        <div class="card-grid">
+          <a href="BusinessWebTechSlides/Angular13.pdf" class="card-item">
+            <div class="card-icon">🅰️</div>
+            <h3>Angular 13</h3>
+            <p>Angular Framework.</p>
+          </a>
+          <a href="BusinessWebTechSlides/DotNetCore.pdf" class="card-item">
+            <div class="card-icon">💻</div>
+            <h3>.NET CORE</h3>
+            <p>Microsoft Framework.</p>
+          </a>
+        </div>
 
-      <ul class="Semester">
-        <li class="Semester">
-          <a class="white" href="BusinessWebTechSlides/html.pdf"
-            >Introduction To Html</a
-          >
-        </li>
-        <li class="Semester">
-          <a class="white" href="BusinessWebTechSlides/css.pdf"
-            >Introduction to CSS</a
-          >
-        </li>
-        <li class="Semester">
-          <a class="white" href="BusinessWebTechSlides/Javascript.pdf"
-            >Introducation to Java Script</a
-          >
-        </li>
-        <li class="Semester">
-          <a class="white" href="BusinessWebTechSlides/php.pdf"
-            >Introduction to PHP</a
-          >
-        </li>
-      </ul>
+        <h3 style="text-align: center; margin-top: 40px; margin-bottom: 20px;">Tutorial Slides</h3>
+        <div class="card-grid">
+          <a href="BusinessWebTechSlides/html.pdf" class="card-item">
+            <div class="card-icon">🌐</div>
+            <h3>Intro to HTML</h3>
+            <p>HyperText Markup Language.</p>
+          </a>
+          <a href="BusinessWebTechSlides/css.pdf" class="card-item">
+            <div class="card-icon">🎨</div>
+            <h3>Intro to CSS</h3>
+            <p>Cascading Style Sheets.</p>
+          </a>
+          <a href="BusinessWebTechSlides/Javascript.pdf" class="card-item">
+            <div class="card-icon">📜</div>
+            <h3>Intro to JS</h3>
+            <p>JavaScript.</p>
+          </a>
+          <a href="BusinessWebTechSlides/php.pdf" class="card-item">
+            <div class="card-icon">🐘</div>
+            <h3>Intro to PHP</h3>
+            <p>Hypertext Preprocessor.</p>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 Tech Edu Assistant. All rights reserved.</p>
     </div>
-  </body>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+
 </html>

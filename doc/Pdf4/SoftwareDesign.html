@@ -1,71 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Software Design & Analysis</title>
-    <link rel="icon" href="t.png" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="../../css/SubjectStyle.css" />
-  </head>
 
-  <body bgcolor="#00FA9A">
-    <h3>
-      <ul>
-        <li class="web">
-          <a class="white" href="../SubType4/SoftwareDesign.html">Topics</a>
-        </li>
-        <li class="web">
-          <a class="white" href="../VideoLink4/SoftwareDesign.html"
-            >Video Tutorials</a
-          >
-        </li>
-        <li class="web">
-          <a class="white" href="../Pdf4/SoftwareDesign.html">Slides</a>
-        </li>
-        <li class="web">
-          <a class="white" href="../Link4/SoftwareDesign.html">Links</a>
-        </li>
-      </ul>
-    </h3>
-    <br /><br />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/Style.css">
+  <link rel="stylesheet" href="../../css/LandingPage.css">
+  <link rel="icon" href="../../t.png" type="image/x-icon">
 
-    <h1 class="headlines">Software Design & Analysis</h1>
-    <br />
-    
-    <h2 class="headlines">Books</h2>
-    <ul class="Semester">   
-      <li class="Semester">
-        <a class="white" href="../Pdf4/SoftwareDesign/Software-Engineering.pdf">Software Engineering</a>
-      </li>
+  <title>Software Design & Analysis</title>
+</head>
 
-      <li class="Semester">
-        <a class="white" href="../Pdf4/SoftwareDesign/Software-Architecture-Patterns.pdf">Software Architecture Patterns</a>
-      </li>
-    </ul>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="wrapper">
+        <a href="../../index.html" class="site-title"><span class="site-title-icon">🎓</span> <span
+            class="site-title-text">Tech Edu<br>Assistant</span></a>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../html/Semesters.html">Semesters</a></li>
+          <li><a href="../html/Subjects.html">Subjects</a></li>
+          <li><a href="../html/Books.html">Books</a></li>
+          <li><a href="../html/IIT_Syllabus.pdf">Syllabus</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <h2 class="headlines">Slides</h2>
-    <ul class="Semester">   
-      <li class="Semester">
-        <a class="white" href="../Pdf4/SoftwareDesign/Software-Design.pdf">Software Design Concepts</a>
-      </li>
+  <main>
+    <!-- Books -->
+    <section class="card-menu-section" style="background-color: #fff;">
+      <div class="container">
+        <h2>Books</h2>
+        <div class="card-grid">
+          <a href="../Pdf4/SoftwareDesign/Software-Engineering.pdf" class="card-item">
+            <div class="card-icon">📕</div>
+            <h3>Software Eng</h3>
+            <p>Software Engineering.</p>
+          </a>
+          <a href="../Pdf4/SoftwareDesign/Software-Architecture-Patterns.pdf" class="card-item">
+            <div class="card-icon">🏗️</div>
+            <h3>Arch Patterns</h3>
+            <p>Software Architecture Patterns.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-      <li class="Semester">
-        <a class="white" href="../Pdf4/SoftwareDesign/Architecture-Patterns.pdf">Architecture Patterns</a>
-      </li>
+    <!-- Slides -->
+    <section class="card-menu-section">
+      <div class="container">
+        <h2>Slides</h2>
+        <div class="card-grid">
+          <a href="../Pdf4/SoftwareDesign/Software-Design.pdf" class="card-item">
+            <div class="card-icon">🎨</div>
+            <h3>Design Concepts</h3>
+            <p>Software Design Concepts.</p>
+          </a>
+          <a href="../Pdf4/SoftwareDesign/Architecture-Patterns.pdf" class="card-item">
+            <div class="card-icon">🏛️</div>
+            <h3>Arch Patterns</h3>
+            <p>Architecture Patterns.</p>
+          </a>
+          <a href="../Pdf4/SoftwareDesign/State-Charts.pdf" class="card-item">
+            <div class="card-icon">📊</div>
+            <h3>State Charts</h3>
+            <p>State Machine Diagrams.</p>
+          </a>
+          <a href="../Pdf4/SoftwareDesign/Deployment-Diagram.pdf" class="card-item">
+            <div class="card-icon">⚙️</div>
+            <h3>Deployment</h3>
+            <p>Deployment Diagram.</p>
+          </a>
+        </div>
 
-      <li class="Semester">
-        <a class="white" href="../Pdf4/SoftwareDesign/State-Charts.pdf">State Charts</a>
-      </li>
+        <h3 style="text-align: center; margin-top: 40px; margin-bottom: 20px;">Additional Resources</h3>
+        <div class="card-grid">
+          <a href="../Pdf4/SoftwareDesign/Design-and-Use-of-Software-Architectures.pdf" class="card-item">
+            <div class="card-icon">📐</div>
+            <h3>Design & Use</h3>
+            <p>Software Architectures.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-      <li class="Semester">
-        <a class="white" href="../Pdf4/SoftwareDesign/Deployment-Diagram.pdf">Deployment Diagram</a>
-      </li>
-    </ul>
+  </main>
 
-    <h2 class="headlines">Additional</h2>
-    <ul class="Semester">   
-      <li class="Semester">
-        <a class="white" href="../Pdf4/SoftwareDesign/Design-and-Use-of-Software-Architectures.pdf">Design and Use of Software Architectures</a>
-      </li>
-    </ul>
-  </body>
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 Tech Edu Assistant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+
 </html>
