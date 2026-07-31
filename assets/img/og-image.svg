@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="0.45" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#93c5fd"/>
+      <stop offset="1" stop-color="#6ee7b7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.14" fill="none" stroke="#fff" stroke-width="1">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200"/>
+    <path d="M100 0v630M200 0v630M300 0v630M400 0v630M500 0v630M600 0v630M700 0v630M800 0v630M900 0v630M1000 0v630M1100 0v630"/>
+  </g>
+  <g transform="translate(96,150)">
+    <rect width="86" height="86" rx="22" fill="rgba(255,255,255,0.18)"/>
+    <g transform="translate(43,43)" fill="none" stroke="#fff" stroke-width="4"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22-6 0-17-22-6 0 5z"/>
+      <path d="M-13 0v11c0 3.6 5.8 6.5 13 6.5s13-2.9 13-6.5V0"/>
+    </g>
+  </g>
+  <text x="96" y="330" font-family="-apple-system, Segoe UI, Roboto, sans-serif"
+        font-size="76" font-weight="700" fill="#ffffff">Tech Edu Assistant</text>
+  <text x="96" y="400" font-family="-apple-system, Segoe UI, Roboto, sans-serif"
+        font-size="34" font-weight="500" fill="url(#chip)">CSE &amp; Software Engineering resource library</text>
+  <text x="96" y="474" font-family="-apple-system, Segoe UI, Roboto, sans-serif"
+        font-size="26" fill="rgba(255,255,255,0.8)">43 courses · 460+ documents · 250+ video tutorials</text>
+</svg>

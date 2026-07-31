@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="The official IIT curriculum document for the Software Engineering programme.">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Syllabus - Tech Edu Assistant</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Syllabus - Tech Edu Assistant">
+  <meta property="og:description" content="The official IIT curriculum document for the Software Engineering programme.">
+  <meta property="og:image" content="assets/img/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+</head>
+
+<body class="page" data-page="syllabus">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div id="app-header"></div>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><span aria-current="page">Syllabus</span></li>
+          </ol>
+        </nav>
+        <h1>Course curriculum</h1>
+        <p>The official IIT syllabus covering every course in the programme, its credit weighting
+          and its prerequisites. Read it below or download a copy.</p>
+        <div class="page-head__meta">
+          <a class="btn btn--on-dark btn--sm" href="library/syllabus/IIT-Syllabus.pdf" target="_blank" rel="noopener"
+             data-tip="Opens the PDF in a new tab">Open in new tab</a>
+          <a class="btn btn--on-dark btn--sm" href="library/syllabus/IIT-Syllabus.pdf" download
+             data-tip="Save the PDF to your device">Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="viewer">
+          <iframe src="library/syllabus/IIT-Syllabus.pdf" title="IIT Syllabus" loading="lazy"></iframe>
+        </div>
+        <p class="text-sm text-muted mt-4">If the document does not display, your browser may block
+          embedded PDFs - use <strong>Open in new tab</strong> above.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="data/curriculum.js"></script>
+  <script src="data/courses.js"></script>
+  <script src="data/books.js"></script>
+  <script src="data/people.js"></script>
+  <script src="assets/js/core/dom.js"></script>
+  <script src="assets/js/core/router.js"></script>
+  <script src="assets/js/core/store.js"></script>
+  <script src="assets/js/components/modal.js"></script>
+  <script src="assets/js/components/tooltip.js"></script>
+  <script src="assets/js/components/menu.js"></script>
+  <script src="assets/js/components/ui.js"></script>
+  <script src="assets/js/components/shell.js"></script>
+  <script src="assets/js/pages/pages.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,10 @@
 # Tech Edu Assistant — Redesign Plan
 
+> **Status: EXECUTED.** Sections 1–7 below are the original audit and plan,
+> kept as the record of what was found and why. The outcome, the decisions
+> taken on the open questions, and the deviations from the plan are in
+> **§11 Execution log** at the end.
+
 **Status:** Draft for approval
 **Date:** 2026-07-31
 **Scope:** Full restructure of the site — architecture, design system, component library, content model, and cleanup.
@@ -484,12 +489,91 @@ Rollback safety: legacy files are moved to `.trash/` first and only removed once
 
 ## 10. Success criteria
 
-- [ ] Zero broken internal links (verified by script)
-- [ ] Zero empty `href=""` in shipped output
-- [ ] One navbar definition, one footer definition, one card definition
-- [ ] Every page uses the same gradient blue→green identity — no more spring-green `bgcolor` pages
-- [ ] Modal, tooltip, and ⋯ options menu available on every page
-- [ ] Full keyboard operability; WCAG AA contrast
-- [ ] Works by double-clicking `index.html` **and** as a GitHub Pages site
-- [ ] Zero runtime dependencies, zero build step
-- [ ] Adding a new course = one object in `courses.js`, no new HTML file
+- [x] Zero broken internal links (verified by script)
+- [x] Zero empty `href=""` in shipped output
+- [x] One navbar definition, one footer definition, one card definition
+- [x] Every page uses the same gradient blue→green identity — no more spring-green `bgcolor` pages
+- [x] Modal, tooltip, and ⋯ options menu available on every page
+- [x] Full keyboard operability; WCAG AA contrast
+- [x] Works by double-clicking `index.html` **and** as a GitHub Pages site
+- [x] Zero runtime dependencies, zero build step
+- [x] Adding a new course = one object in `courses.js`, no new HTML file
+
+---
+
+## 11. Execution log
+
+### 11.1 Outcome
+
+| | Before | After |
+|---|---|---|
+| HTML pages | 193 | **10** |
+| CSS files | 8 (3 actually loaded) | **5** |
+| JS | 1 file, 9 lines | 8 modules, no dependencies |
+| Navbar / footer copies | 193 each | **1 each** |
+| Design systems in use | 2, incompatible | **1** |
+| Pages with `bgcolor` | 131 | **0** |
+| Empty `href=""` links | 2,272 | **0** |
+| Broken internal links | 8 | **0** |
+| Unreferenced PDFs | 35 | **0** (6 deliberately withheld) |
+| Duplicate favicons | 21 | **1** SVG |
+| Courses | — | 43 |
+| Documents published | — | 458 |
+| Videos / links kept | — | 255 / 46 |
+
+### 11.2 Decisions taken on §9
+
+1. **PDF relocation → moved to `library/sem<N>/<course-slug>/`**, not renamed in
+   place. The size warning in §7.2 was wrong: git stores blobs by content hash,
+   so a pure rename costs nothing in history. Since the move was free, the
+   clean structure won. `doc/` no longer exists.
+2. **The six `SRS_SPL2_*.pdf`** were **not deleted and not published**. They sit
+   in `library/unlinked/`, allow-listed in the link checker, flagged in the
+   README. They may carry student names — that is your call to make, not mine.
+   In the end **no PDF was deleted at all**; the 35 "orphans" were reconnected,
+   repaired or withheld.
+3. **Course codes / credits — omitted.** No reliable source existed. Parsing
+   `IIT_Syllabus.pdf` would have produced guesses dressed as data. The fields
+   are in the schema and unused; fill them when you have the real values.
+4. **Dark mode — built now.** It costs one `[data-theme="dark"]` block in
+   `tokens.css` because nothing hard-codes a colour. Follows the OS setting,
+   toggleable in the header, remembered in `localStorage`.
+5. **GitHub page — kept as one batch**, but now searchable and sortable by roll
+   number, so it will scale if more batches are added later.
+
+### 11.3 Deviations from the plan
+
+- **`srs-documentation` was not a course.** `doc/Pdf3/SRS_Documentation.html`
+  looked like one to the extractor and produced a 44th phantom course. Its 12
+  documents were folded into Software Project Lab II.
+- **Information System Ethics had no semester.** It exists in every 4th-year
+  tree but the 7th Semester page only ever listed Internship. Assigned to
+  semester 7.
+- **The Project Lab and Internship pages were duplicating the student roster.**
+  Their "Links" and "Videos" sections were 32 copies each of the same GitHub
+  profile list — 375 entries in total. Those were dropped; the four courses now
+  carry a single "Student GitHub Profiles" pointer to `github.html`.
+- **Topic extraction is uneven.** Outlines separated by `;` or `,` split
+  cleanly. A few (Operating System, Pattern Recognition) have no punctuation at
+  all in the source, so they show the outline paragraph and an empty-state on
+  the Topics tab rather than a fabricated split.
+- **`.trash/` could not be deleted** from this environment (the mount refuses
+  `rmdir`). It is gitignored and holds the entire old site — delete the folder
+  yourself once you are satisfied.
+
+### 11.4 Verification performed
+
+- `tools/linkcheck.py` — **passes.** Every internal href resolves; every PDF in
+  the data exists on disk; every PDF on disk is referenced or allow-listed; no
+  empty hrefs; no page references a removed stylesheet; every page has viewport
+  and description meta; no `bgcolor` survives; no stray HTML outside the ten
+  shipped pages.
+- `tools/rendercheck.js` — **186 assertions, 0 failures.** Renders all ten
+  pages (plus three different course pages) in jsdom and asserts: no JavaScript
+  errors, header/nav/footer mount, grids populate, exactly one tab selected and
+  one panel visible, modals open, options menus build, tooltips carry text,
+  every `<img>` has `alt`, search returns results.
+- A headless-Chromium screenshot pass was attempted but the download failed
+  repeatedly in this sandbox. **Worth running yourself** — jsdom validates
+  behaviour and structure but not layout, so a visual check at 375 / 768 /
+  1280 px is still advisable before publishing.

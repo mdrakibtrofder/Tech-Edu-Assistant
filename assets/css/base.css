@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Base - modern reset + element defaults + typography
+   Replaces the old normalize.css (which was never even loaded).
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + var(--s-4));
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  color: var(--text);
+  background: var(--canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background var(--t-base), color var(--t-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--s-3);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-lg); }
+h4 { font-size: var(--fs-md); }
+
+p { margin: 0 0 var(--s-4); }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+a:hover { color: var(--secondary); }
+
+ul, ol { margin: 0 0 var(--s-4); padding-left: var(--s-6); }
+li { margin-bottom: var(--s-1); }
+
+img, svg, video, iframe { max-width: 100%; display: block; }
+img { height: auto; }
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button { cursor: pointer; background: none; border: none; padding: 0; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: var(--s-7) 0;
+}
+
+code, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+kbd {
+  padding: 2px 6px;
+  border-radius: var(--r-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+::selection {
+  background: var(--blue-100);
+  color: var(--blue-900);
+}
+
+/* ---- Focus ------------------------------------------------------------- */
+
+:focus { outline: none; }
+
+:focus-visible {
+  outline: 2px solid var(--blue-600);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+/* ---- Skip link --------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  left: var(--s-4);
+  top: -100px;
+  z-index: calc(var(--z-header) + 1);
+  padding: var(--s-3) var(--s-5);
+  background: var(--surface);
+  color: var(--primary);
+  border-radius: var(--r-md);
+  box-shadow: var(--sh-3);
+  font-weight: var(--fw-semibold);
+  transition: top var(--t-fast);
+}
+.skip-link:focus { top: var(--s-3); }
+
+/* ---- Scrollbar --------------------------------------------------------- */
+
+* { scrollbar-width: thin; scrollbar-color: var(--ink-300) transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: var(--ink-300);
+  border-radius: var(--r-full);
+  border: 3px solid var(--canvas);
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--ink-400); }
+
+/* ---- Reduced motion ---------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---- Print ------------------------------------------------------------- */
+
+@media print {
+  .site-header, .site-footer, .to-top, .scroll-progress, .toolbar { display: none !important; }
+  body { background: #fff; }
+}

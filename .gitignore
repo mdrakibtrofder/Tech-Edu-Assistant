@@ -5,3 +5,6 @@ node_modules
 dist
 .cache
 .env
+
+# migration scratch (safe to delete once the rebuild is verified)
+.trash/

@@ -3,106 +3,123 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/Style.css">
-  <link rel="stylesheet" href="css/LandingPage.css">
-  <link rel="icon" href="t.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="A curated library of lecture slides, books, video tutorials and reference links for the Computer Science and Software Engineering curriculum.">
+  <meta name="color-scheme" content="light dark">
 
-  <title>Tech Edu Assistant</title>
+  <title>Tech Edu Assistant - CSE &amp; SE Resource Library</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tech Edu Assistant - CSE &amp; SE Resource Library">
+  <meta property="og:description" content="A curated library of lecture slides, books, video tutorials and reference links for the Computer Science and Software Engineering curriculum.">
+  <meta property="og:image" content="assets/img/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
 </head>
 
-<body>
-  <header class="main-header">
-    <nav class="navbar">
-      <div class="wrapper">
-        <a href="#" class="site-title"><span class="site-title-icon">🎓</span> <span class="site-title-text">Tech
-            Edu<br>Assistant</span></a>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="doc/html/Semesters.html">Semesters</a></li>
-          <li><a href="doc/html/Subjects.html">Subjects</a></li>
-          <li><a href="doc/html/Books.html">Books</a></li>
-          <li><a href="doc/html/IIT_Syllabus.pdf">Syllabus</a></li>
-        </ul>
+<body class="page" data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      </div>
-    </nav>
-  </header>
+  <div id="app-header"></div>
 
-  <main>
-    <section id="hero" class="hero-section">
-      <div class="hero-content">
-        <h1>Welcome to Tech Edu Assistant</h1>
-        <p>Your ultimate resource for technical education materials.</p>
-        <a href="#card-menu" class="btn-primary">Explore Resources</a>
-      </div>
-    </section>
-
-    <section id="card-menu" class="card-menu-section">
+  <main id="main">
+    <section class="hero">
       <div class="container">
-        <h2>Quick Access</h2>
-        <div class="card-grid">
-          <a href="doc/html/Semesters.html" class="card-item">
-            <div class="card-icon">📚</div>
-            <h3>Semesters</h3>
-            <p>Browse materials by academic semesters.</p>
-          </a>
-          <a href="doc/html/Subjects.html" class="card-item">
-            <div class="card-icon">📖</div>
-            <h3>Subjects</h3>
-            <p>Explore topics across various subjects.</p>
-          </a>
-          <a href="doc/html/Books.html" class="card-item">
-            <div class="card-icon">📘</div>
-            <h3>Books</h3>
-            <p>Access a comprehensive collection of books.</p>
-          </a>
-          <a href="doc/html/Github.html" class="card-item">
-            <div class="card-icon">💻</div>
-            <h3>Github Accounts</h3>
-            <p>Discover relevant GitHub repositories.</p>
-          </a>
-          <a href="doc/html/IIT_Syllabus.pdf" class="card-item">
-            <div class="card-icon">📄</div>
-            <h3>Syllabus</h3>
-            <p>View the academic syllabus.</p>
-          </a>
+        <div class="hero__inner">
+          <span class="hero__badge"><span>CSE &amp; SE</span> Resource Library</span>
+          <h1>Everything you need for the <em>Software Engineering</em> curriculum.</h1>
+          <p>Lecture slides, reference books, video tutorials and hand-picked links - organised
+            by semester and by subject, in one place, with nothing to install.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="semesters.html">Browse semesters</a>
+            <button class="btn btn--on-dark" type="button" data-action="search">Search resources</button>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="features" class="features-section">
+    <section class="section section--tight">
       <div class="container">
-        <h2>Key Features</h2>
-        <div class="feature-grid">
-          <div class="feature-item">
-            <div class="feature-icon">🗺️</div>
-            <h3>Structured Learning Paths</h3>
-            <p>Follow curated semester-wise and subject-wise learning paths.</p>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">📚</div>
-            <h3>Comprehensive Book Collection</h3>
-            <p>Access a wide range of technical books and study materials.</p>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">🔗</div>
-            <h3>Syllabus & GitHub Integration</h3>
-            <p>Stay updated with the latest syllabus and explore relevant GitHub repositories.</p>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <section class="section" id="explore">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow">Start here</span>
+            <h2>Quick <span class="grad-text">access</span></h2>
+            <p>Five ways into the library. Pick whichever matches how you think about your coursework.</p>
           </div>
         </div>
+        <div class="grid" id="quick-access"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow">How it works</span>
+            <h2>Three steps to the file you need</h2>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>Pick a semester or subject</h3>
+            <p>Every course is filed under both, so use whichever route you have in mind.</p>
+          </div>
+          <div class="step">
+            <h3>Open the course</h3>
+            <p>Outline, topics, slides, videos and links sit behind four tabs on a single page.</p>
+          </div>
+          <div class="step">
+            <h3>Preview, then download</h3>
+            <p>Check a PDF in the preview window before committing to the download.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow">Best stocked</span>
+            <h2>Courses with the most <span class="grad-text">material</span></h2>
+            <p>These courses have the deepest collections of slides, videos and references.</p>
+          </div>
+          <a class="btn btn--outline" href="semesters.html">All courses</a>
+        </div>
+        <div class="grid" id="rich-courses"></div>
       </div>
     </section>
 
   </main>
 
-  <footer class="main-footer">
-    <div class="container">
-      <p>&copy; 2026 Tech Edu Assistant. All rights reserved.</p>
-    </div>
-  </footer>
+  <div id="app-footer"></div>
 
-  <script src="js/main.js"></script>
+  <script src="data/curriculum.js"></script>
+  <script src="data/courses.js"></script>
+  <script src="data/books.js"></script>
+  <script src="data/people.js"></script>
+  <script src="assets/js/core/dom.js"></script>
+  <script src="assets/js/core/router.js"></script>
+  <script src="assets/js/core/store.js"></script>
+  <script src="assets/js/components/modal.js"></script>
+  <script src="assets/js/components/tooltip.js"></script>
+  <script src="assets/js/components/menu.js"></script>
+  <script src="assets/js/components/ui.js"></script>
+  <script src="assets/js/components/shell.js"></script>
+  <script src="assets/js/pages/pages.js"></script>
 </body>
 
 </html>

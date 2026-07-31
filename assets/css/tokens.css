@@ -1,0 +1,176 @@
+/* ==========================================================================
+   Tech Edu Assistant - Design tokens
+   Single source of truth for colour, gradient, type, space, radius, shadow,
+   and motion. Nothing below this file should hard-code a colour.
+   ========================================================================== */
+
+:root {
+  /* ---- Primary: blue ---------------------------------------------------- */
+  --blue-50:  #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;   /* primary */
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+
+  /* ---- Secondary: green ------------------------------------------------- */
+  --green-50:  #ecfdf5;
+  --green-100: #d1fae5;
+  --green-200: #a7f3d0;
+  --green-300: #6ee7b7;
+  --green-400: #34d399;
+  --green-500: #10b981;  /* secondary */
+  --green-600: #059669;
+  --green-700: #047857;
+  --green-800: #065f46;
+  --green-900: #064e3b;
+
+  --primary: var(--blue-600);
+  --secondary: var(--green-600);
+
+  /* ---- Neutrals --------------------------------------------------------- */
+  --ink-900: #0f172a;
+  --ink-800: #1e293b;
+  --ink-700: #334155;
+  --ink-600: #475569;
+  --ink-500: #64748b;
+  --ink-400: #94a3b8;
+  --ink-300: #cbd5e1;
+  --ink-200: #e2e8f0;
+  --ink-100: #f1f5f9;
+  --ink-50:  #f8fafc;
+
+  --surface: #ffffff;
+  --surface-2: var(--ink-50);
+  --canvas: #f6f9fc;
+  --border: var(--ink-200);
+  --border-strong: var(--ink-300);
+
+  --text: var(--ink-800);
+  --text-muted: var(--ink-500);
+  --text-invert: #ffffff;
+
+  /* ---- Semantic --------------------------------------------------------- */
+  --success: var(--green-600);
+  --success-bg: var(--green-50);
+  --warning: #b45309;
+  --warning-bg: #fffbeb;
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --info: var(--blue-600);
+  --info-bg: var(--blue-50);
+
+  /* ---- Gradients: the signature of the design --------------------------- */
+  --grad-primary:      linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+  --grad-primary-rev:  linear-gradient(135deg, #10b981 0%, #2563eb 100%);
+  --grad-primary-soft: linear-gradient(135deg, #eff6ff 0%, #ecfdf5 100%);
+  --grad-hero:         linear-gradient(135deg, #1e3a8a 0%, #2563eb 45%, #059669 100%);
+  --grad-header:       linear-gradient(90deg, #1d4ed8 0%, #2563eb 55%, #10b981 100%);
+  --grad-line:         linear-gradient(90deg, #2563eb, #10b981);
+  --grad-text:         linear-gradient(90deg, #2563eb, #059669);
+  --grad-ring:         linear-gradient(135deg, #3b82f6, #10b981);
+  --grad-veil:         linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,.06) 100%);
+
+  /* ---- Typography ------------------------------------------------------- */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --fs-xs:   0.75rem;   /* 12 */
+  --fs-sm:   0.875rem;  /* 14 */
+  --fs-base: 1rem;      /* 16 */
+  --fs-md:   1.125rem;  /* 18 */
+  --fs-lg:   1.25rem;   /* 20 */
+  --fs-xl:   1.5rem;    /* 24 */
+  --fs-2xl:  2rem;      /* 32 */
+  --fs-3xl:  2.5rem;    /* 40 */
+  --fs-4xl:  3.5rem;    /* 56 */
+
+  --lh-tight: 1.2;
+  --lh-snug: 1.4;
+  --lh-base: 1.65;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ---- Space (4pt scale) ------------------------------------------------ */
+  --s-1: 4px;   --s-2: 8px;   --s-3: 12px;  --s-4: 16px;
+  --s-5: 20px;  --s-6: 24px;  --s-7: 32px;  --s-8: 40px;
+  --s-9: 48px;  --s-10: 64px; --s-11: 80px; --s-12: 96px;
+
+  /* ---- Radius ----------------------------------------------------------- */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-full: 999px;
+
+  /* ---- Shadow ----------------------------------------------------------- */
+  --sh-1: 0 1px 2px rgba(15, 23, 42, .06), 0 1px 3px rgba(15, 23, 42, .08);
+  --sh-2: 0 2px 4px rgba(15, 23, 42, .04), 0 6px 16px rgba(15, 23, 42, .08);
+  --sh-3: 0 8px 16px rgba(15, 23, 42, .08), 0 20px 40px rgba(15, 23, 42, .12);
+  --sh-focus: 0 0 0 3px rgba(37, 99, 235, .35), 0 0 0 6px rgba(16, 185, 129, .18);
+
+  /* ---- Motion ----------------------------------------------------------- */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --t-fast: 150ms var(--ease);
+  --t-base: 250ms var(--ease);
+  --t-slow: 400ms var(--ease);
+
+  /* ---- Layout ----------------------------------------------------------- */
+  --container: 1200px;
+  --container-narrow: 860px;
+  --header-h: 68px;
+  --z-header: 100;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-tooltip: 400;
+  --z-toast: 500;
+}
+
+/* ==========================================================================
+   Dark theme
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --surface: #111827;
+  --surface-2: #0d1420;
+  --canvas: #0b1120;
+  --border: #1f2b3d;
+  --border-strong: #2c3a50;
+
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+
+  --ink-50:  #0d1420;
+  --ink-100: #131c2b;
+  --ink-200: #1f2b3d;
+  --ink-300: #33415a;
+
+  --primary: var(--blue-400);
+  --secondary: var(--green-400);
+
+  --success-bg: rgba(16, 185, 129, .12);
+  --warning-bg: rgba(245, 158, 11, .12);
+  --danger-bg:  rgba(239, 68, 68, .12);
+  --info-bg:    rgba(59, 130, 246, .14);
+  --warning: #fbbf24;
+  --danger: #f87171;
+
+  --grad-primary:      linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+  --grad-primary-soft: linear-gradient(135deg, rgba(59,130,246,.14) 0%, rgba(16,185,129,.14) 100%);
+  --grad-hero:         linear-gradient(135deg, #0f2557 0%, #1d4ed8 45%, #047857 100%);
+  --grad-header:       linear-gradient(90deg, #16307a 0%, #1d4ed8 55%, #047857 100%);
+  --grad-text:         linear-gradient(90deg, #60a5fa, #34d399);
+
+  --sh-1: 0 1px 2px rgba(0, 0, 0, .4);
+  --sh-2: 0 2px 4px rgba(0, 0, 0, .3), 0 6px 16px rgba(0, 0, 0, .35);
+  --sh-3: 0 8px 16px rgba(0, 0, 0, .35), 0 20px 40px rgba(0, 0, 0, .45);
+  --sh-focus: 0 0 0 3px rgba(96, 165, 250, .45), 0 0 0 6px rgba(52, 211, 153, .22);
+}
